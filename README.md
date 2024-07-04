@@ -1,1 +1,0 @@
-# analitycs-road-safety-system

@@ -1,0 +1,56 @@
+services:
+  postgres:
+    image: postgres:latest
+    container_name: superset_postgres
+    environment:
+      POSTGRES_USER: superset
+      POSTGRES_PASSWORD: superset
+      POSTGRES_DB: superset_db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - road-safety-network
+
+  superset:
+    image: apache/superset:latest
+    container_name: superset_app_new
+    environment:
+      SUPERSET_SECRET_KEY: 'thisISaSECRET_1234'
+      SQLALCHEMY_DATABASE_URI: postgresql+psycopg2://superset:superset@superset_postgres:5432/superset_db
+    volumes:
+      - superset_home:/app/superset_home
+    depends_on:
+      - postgres
+    ports:
+      - "8088:8088"
+    networks:
+      - road-safety-network
+    command:
+      - /bin/bash
+      - -c
+      - |
+        pip install gevent && \
+        superset db upgrade && \
+        superset init && \
+        gunicorn -w 2 -k gevent --timeout 60 -b 0.0.0.0:8088 "superset.app:create_app()"
+
+  carga-db:
+    image: python:3.12
+    volumes:
+      - ./datos procesados:/app/data  # Ajusta la ruta según donde estén tus datos
+    depends_on:
+      - superset
+    networks:
+      - road-safety-network
+    command: >
+      /bin/bash -c "pip install pandas psycopg2-binary &&
+                    python /app/carga-db.py"
+
+networks:
+  road-safety-network:
+
+volumes:
+  postgres_data:
+  superset_home:
