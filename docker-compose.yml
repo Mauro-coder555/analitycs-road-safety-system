@@ -39,13 +39,15 @@ services:
   carga-db:
     image: python:3.12
     volumes:
-      - ./datos procesados:/app/data  # Ajusta la ruta según donde estén tus datos
+      - ./carga-db.py:/app/carga-db.py
+      - ./crear-tablas.sql:/app/crear-tablas.sql
+      - ./datos procesados:/app/datos_procesados 
     depends_on:
       - superset
     networks:
       - road-safety-network
     command: >
-      /bin/bash -c "pip install pandas psycopg2-binary &&
+      /bin/bash -c "pip install pandas psycopg2-binary sqlalchemy &&
                     python /app/carga-db.py"
 
 networks:

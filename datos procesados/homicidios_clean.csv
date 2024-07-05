@@ -455,9 +455,9 @@ ID,N_VICTIMAS,FECHA,HORA,TIPO_DE_CALLE,CALLE,ALTURA,CRUCE,DIRECCIÓN NORMALIZADA
 2019-0019,1,2019-03-06,12:00:00,avenida,del libertador av.,6326.0,sin datos,del libertador av. 6326,13,-58.45049163,-34.55374003,moto,auto,conductor,masculino,sin datos,moto,auto,sin datos,False
 2019-0020,1,2019-03-07,21:01:00,avenida,chiclana av.,3444.0,sin datos,chiclana av. 3444,5,-58.41288952,-34.63572989,moto,auto,conductor,masculino,43.0,moto,auto,30-44,False
 2019-0021,1,2019-03-15,22:50:00,avenida,boyaca av.,sin datos,yerbal,boyaca av. y yerbal,7,-58.45743597,-34.62561234,moto,auto,conductor,masculino,23.0,moto,auto,18-29,True
-2019-0022,1,2019-03-15,1900-01-02 00:00:00,avenida,entre rios av.,1260.0,sin datos,entre rios av. 1260,1,-58.39123782,-34.62352245,auto,sin datos,pasajero_acompañante,masculino,sin datos,auto,sin datos,sin datos,False
+2019-0022,1,2019-03-15,00:00:00,avenida,entre rios av.,1260.0,sin datos,entre rios av. 1260,1,-58.39123782,-34.62352245,auto,sin datos,pasajero_acompañante,masculino,sin datos,auto,sin datos,sin datos,False
 2019-0023,1,2019-03-16,08:28:00,gral paz,"paz, gral. av.",sin datos,"jacques, amadeo","paz, gral. av. y jacques, amadeo",9,-58.52922765,-34.63637963,auto,objeto fijo,conductor,masculino,34.0,auto,objeto fijo,30-44,True
-2019-0024,1,2019-03-19,1900-01-14 07:12:00,avenida,antartida argentina av.,1325.0,sin datos,antartida argentina av. 1325,1,-58.37208118,-34.58541957,moto,cargas,conductor,masculino,32.0,moto,cargas,30-44,False
+2019-0024,1,2019-03-19,07:12:00,avenida,antartida argentina av.,1325.0,sin datos,antartida argentina av. 1325,1,-58.37208118,-34.58541957,moto,cargas,conductor,masculino,32.0,moto,cargas,30-44,False
 2019-0025,1,2019-03-22,13:10:00,calle,"mitre, bartolome",sin datos,sanchez de bustamante,"mitre, bartolome y sanchez de bustamante",5,-58.41458534,-34.60937557,peaton,auto,peaton,masculino,27.0,peaton,auto,18-29,True
 2019-0026,1,2019-03-28,07:32:00,avenida,"fernandez de la cruz, f., gral. av.",sin datos,"paz, gral. av.","fernandez de la cruz, f., gral. av. y paz, gral. av.",8,-58.47976785,-34.69153196,peaton,pasajeros,peaton,masculino,sin datos,peaton,pasajeros,sin datos,True
 2019-0027,1,2019-03-28,11:11:00,avenida,santa fe av.,sin datos,azcuenaga,santa fe av. y azcuenaga,2,-58.39990285,-34.59511714,bicicleta,multiple,ciclista,masculino,37.0,multiple,sin datos,30-44,True
@@ -512,7 +512,7 @@ ID,N_VICTIMAS,FECHA,HORA,TIPO_DE_CALLE,CALLE,ALTURA,CRUCE,DIRECCIÓN NORMALIZADA
 2019-0077,1,2019-09-08,03:40:00,avenida,"figueroa alcorta, pres. av.",sin datos,tagle,"figueroa alcorta, pres. av. y tagle",14,-58.39811256,-34.58070186,peaton,auto,peaton,femenino,28.0,peaton,auto,18-29,True
 2019-0078,1,2019-09-12,08:25:00,avenida,"einstein, alberto",sin datos,"alcorta, amancio av.","einstein, alberto y alcorta, amancio av.",4,-58.41125934,-34.65417740,peaton,cargas,peaton,femenino,72.0,peaton,cargas,65+,True
 2019-0079,1,2019-09-17,05:30:00,calle,agrelo,sin datos,colombres,agrelo y colombres,5,-58.41822901,-34.61866836,moto,pasajeros,conductor,masculino,57.0,moto,pasajeros,45-64,True
-2019-0080,1,2019-09-17,1900-01-04 18:40:00,gral paz,cabildo av.,sin datos,"paz, gral. av.","cabildo av. y paz, gral. av.",13,-58.47617802,-34.53825652,peaton,moto,peaton,masculino,76.0,peaton,moto,65+,True
+2019-0080,1,2019-09-17,18:40:00,gral paz,cabildo av.,sin datos,"paz, gral. av.","cabildo av. y paz, gral. av.",13,-58.47617802,-34.53825652,peaton,moto,peaton,masculino,76.0,peaton,moto,65+,True
 2019-0081,1,2019-09-23,16:00:00,avenida,elcano av.,4300.0,sin datos,elcano av. 4300,15,-58.46141281,-34.58623761,peaton,pasajeros,peaton,masculino,67.0,peaton,pasajeros,65+,False
 2019-0082,1,2019-09-25,07:45:00,avenida,"rabanal, francisco, intendente av.",2428.0,sin datos,"rabanal, francisco, intendente av. 2428",8,-58.42985146,-34.66119740,bicicleta,cargas,ciclista,masculino,47.0,bicicleta,cargas,45-64,False
 2019-0083,1,2019-09-26,08:00:00,calle,monte,sin datos,corvalan,monte y corvalan,9,-58.48457413,-34.65839090,auto,auto,conductor,masculino,73.0,auto,auto,65+,True
