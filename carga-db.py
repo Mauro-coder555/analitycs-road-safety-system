@@ -4,29 +4,16 @@ from sqlalchemy import create_engine, Date, Time, text
 # Conexión a PostgreSQL
 engine = create_engine('postgresql+psycopg2://superset:superset@superset_postgres:5432/superset_db')
 
-# Función para verificar si la tabla existe en la base de datos
-def tabla_existe(tabla):
-    with engine.connect() as connection:
-        query = text(f"SELECT EXISTS (SELECT 1 FROM information_schema.tables WHERE table_name = '{tabla}');")
-        result = connection.execute(query)
-        return result.fetchone()[0]
+# Función para ejecutar el script SQL
+def ejecutar_script_sql(script_file):
+    with open(script_file, 'r') as file:
+        script = file.read()
+        with engine.connect() as connection:
+            connection.execute(text(script))
+            print("Tablas iniciadas exitosamente.")
 
-# Función para ejecutar el script SQL si la tabla no existe
-def ejecutar_script_sql_si_no_existe(script_file):
-    tabla = script_file.split('.')[0].upper()  # Obtener el nombre de la tabla del nombre del archivo
-    if not tabla_existe(tabla):
-        with open(script_file, 'r') as file:
-            script = file.read()
-            with engine.connect() as connection:
-                connection.execute(text(script))  # Convertir el script a objeto text de SQLAlchemy
-                print(f"Tabla {tabla} creada exitosamente.")
-    else:
-        print(f"La tabla {tabla} ya existe en la base de datos.")
+ejecutar_script_sql('/app/crear-tablas.sql')
 
-
-
-
-ejecutar_script_sql_si_no_existe('/app/crear-tablas.sql')
 
 # Cargar datos de homicidios
 homicidios_df = pd.read_csv('/app/datos_procesados/homicidios_clean.csv')
