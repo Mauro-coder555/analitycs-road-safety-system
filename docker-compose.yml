@@ -18,7 +18,7 @@ services:
     container_name: superset_app_new
     environment:
       SUPERSET_SECRET_KEY: 'thisISaSECRET_1234'
-      SQLALCHEMY_DATABASE_URI: postgresql+psycopg2://superset:superset@superset_postgres:5432/superset_db
+      SQLALCHEMY_DATABASE_URI: "postgresql+psycopg2://superset:superset@superset_postgres:5432/superset_db"
     volumes:
       - superset_home:/app/superset_home
     depends_on:

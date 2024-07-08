@@ -2,7 +2,7 @@ import pandas as pd
 from sqlalchemy import create_engine, Date, Time, text
 
 # Conexión a PostgreSQL
-engine = create_engine('postgresql+psycopg2://superset:superset@superset_postgres:5432/superset_db')
+engine = create_engine("postgresql+psycopg2://superset:superset@superset_postgres:5432/superset_db")
 
 # Función para ejecutar el script SQL
 def ejecutar_script_sql(script_file):
