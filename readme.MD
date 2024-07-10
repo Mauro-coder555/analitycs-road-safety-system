@@ -260,6 +260,7 @@ Sigue estos pasos para configurar tu entorno y restaurar la base de datos de Sup
    ```
 
 ### 4. Accede a Superset en tu navegador web:
+   Utiliza las credenciales por defecto de superset. [Ver aquí](https://www.restack.io/docs/superset-knowledge-apache-superset-default-login)
    http://localhost:8088
 
 ### 5. Accede al dashboard OSMV para visualizar gráficos interactivos sobre la problemática en cuestión.
