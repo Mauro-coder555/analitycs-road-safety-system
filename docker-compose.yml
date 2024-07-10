@@ -39,8 +39,8 @@ services:
   carga-db:
     image: python:3.12
     volumes:
-      - ./carga-db.py:/app/carga-db.py
-      - ./crear-tablas.sql:/app/crear-tablas.sql
+      - ./db scripts/carga-db.py:/app/carga-db.py
+      - ./db scripts/crear-tablas.sql:/app/crear-tablas.sql
       - ./datos procesados:/app/datos_procesados 
     depends_on:
       - superset
