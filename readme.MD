@@ -47,6 +47,9 @@ Para obtener información relacionada con los archivos, tipos y descripciones qu
 | 7  | ETL  | .ipynb   | Contiene todo el proceso de extracción, limpieza y carga de datps con comentarios en markdown y paso a paso          |
 | 8  | imgs  | .png   | Contiene imagenes para la parte visual del readme          |
 | 9  | KPI'S  | .csv   | Contiene archivos csv asociados a los KPI'S tratados          |
+| 10  | db scripts  | .sql/,py  | Contiene archivos asociados a la carga y restauraciòn de las bases de datos          |
+| 11  | docker-compose  | .yml   | Contiene el código para la inicializacion de los contenedores docker        |
+
 
 
 ## Datasets
@@ -260,7 +263,8 @@ Sigue estos pasos para configurar tu entorno y restaurar la base de datos de Sup
    ```
 
 ### 4. Accede a Superset en tu navegador web:
-   Utiliza las credenciales por defecto de superset. [Ver aquí](https://www.restack.io/docs/superset-knowledge-apache-superset-default-login)
+   Utiliza las credenciales por defecto de superset. [Ver aquí.](https://www.restack.io/docs/superset-knowledge-apache-superset-default-login)
+
    http://localhost:8088
 
 ### 5. Accede al dashboard OSMV para visualizar gráficos interactivos sobre la problemática en cuestión.
