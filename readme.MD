@@ -237,3 +237,28 @@ Fomento del Uso del Transporte Público:
 Como medida para reducir la congestión vehicular y promover una movilidad más sostenible, se propone fomentar el uso del transporte público. Esto podría lograrse mediante campañas de concientización, mejoras en la accesibilidad y la eficiencia del transporte público, así como la implementación de incentivos para su utilización.
 
 Integrar estas medidas de manera coordinada y sistémica podría tener un impacto significativo en la reducción de incidentes viales en CABA, abordando tanto aspectos de infraestructura como de comportamiento y conciencia ciudadana.
+
+
+
+## Instrucciones para Configurar y Restaurar la Base de Datos de Superset
+
+Sigue estos pasos para configurar tu entorno y restaurar la base de datos de Superset con los gráficos y dashboards preconfigurados.
+
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/Mauro-coder555/analitycs-road-safety-system.git
+   cd analitycs-road-safety-system
+  ```
+
+2. Levanta los contenedores de Docker:
+   ```bash
+   docker-compose up -d
+   ```
+
+3. Asegúrate de tener Python instalado y ejecuta el script para restaurar el volcado de la base de datos PostgreSQL:
+   ```Python
+   python restore_db.py
+   ```
+
+4. Accede a Superset en tu navegador web:
+   http://localhost:8088
