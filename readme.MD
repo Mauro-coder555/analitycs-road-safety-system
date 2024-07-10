@@ -18,6 +18,7 @@ Este proyecto tiene como objetivo realizar un análisis exploratorio de los dato
     - [Manejo de Valores Nulos](#manejo-de-valores-nulos)
   - [Estructuración del Análisis Exploratorio de Datos (EDA)](#estructuración-del-análisis-exploratorio-de-datos-eda)
   - [Conclusiones Finales](#conclusiones-finales)
+  - [Instrucciones para visualizar el Dashboard Interactivo](#instrucciones-para-visualizar-el-dashboard-interactivo)
 
 
 ## Tecnologías
@@ -238,27 +239,28 @@ Como medida para reducir la congestión vehicular y promover una movilidad más 
 
 Integrar estas medidas de manera coordinada y sistémica podría tener un impacto significativo en la reducción de incidentes viales en CABA, abordando tanto aspectos de infraestructura como de comportamiento y conciencia ciudadana.
 
-
-
-## Instrucciones para Configurar y Restaurar la Base de Datos de Superset
+## Instrucciones para visualizar el Dashboard Interactivo
 
 Sigue estos pasos para configurar tu entorno y restaurar la base de datos de Superset con los gráficos y dashboards preconfigurados.
 
-1. Clona el repositorio:
+### 1. Clona el repositorio:
    ```bash
    git clone https://github.com/Mauro-coder555/analitycs-road-safety-system.git
    cd analitycs-road-safety-system
-  ```
+   ```
 
-2. Levanta los contenedores de Docker:
+### 2. Levanta los contenedores de Docker:
    ```bash
    docker-compose up -d
    ```
 
-3. Asegúrate de tener Python instalado y ejecuta el script para restaurar el volcado de la base de datos PostgreSQL:
+### 3. Asegúrate de tener Python instalado y ejecuta el script para restaurar el volcado de la base de datos PostgreSQL:
    ```Python
    python restore_db.py
    ```
 
-4. Accede a Superset en tu navegador web:
+### 4. Accede a Superset en tu navegador web:
    http://localhost:8088
+
+### 5. Accede al dashboard OSMV para visualizar gráficos interactivos sobre la problemática en cuestión.
+   
