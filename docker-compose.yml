@@ -8,7 +8,6 @@ services:
       POSTGRES_DB: superset_db
     volumes:
       - postgres_data:/var/lib/postgresql/data
-      - ./superset_export:/app/superset_export
     ports:
       - "5432:5432"
     networks:
@@ -22,6 +21,9 @@ services:
       SQLALCHEMY_DATABASE_URI: "postgresql+psycopg2://superset:superset@superset_postgres:5432/superset_db"
     volumes:
       - superset_home:/app/superset_home
+      - ./superset_db/superset.db:/app/superset_home/superset.db
+    # - ./superset_export:/app/superset_export
+    # - ./init_superset.py:/app/init_superset.py  # Línea agregada
     depends_on:
       - postgres
     ports:
@@ -36,13 +38,14 @@ services:
         superset db upgrade && \
         superset init && \
         gunicorn -w 2 -k gevent --timeout 60 -b 0.0.0.0:8088 "superset.app:create_app()"
+        python /app/init_superset.py
 
   carga-db:
     image: python:3.12
     volumes:
       - ./db manage/carga-db.py:/app/carga-db.py
       - ./db manage/crear-tablas.sql:/app/crear-tablas.sql
-      - ./datos procesados:/app/datos_procesados 
+      - ./datos procesados:/app/datos_procesados
     depends_on:
       - superset
     networks:
