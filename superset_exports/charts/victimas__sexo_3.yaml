@@ -1,0 +1,92 @@
+slice_name: victimas | sexo
+description: null
+certified_by: null
+certification_details: null
+viz_type: echarts_timeseries_bar
+params:
+  datasource: 1__table
+  viz_type: echarts_timeseries_bar
+  slice_id: 3
+  x_axis: SEXO
+  time_grain_sqla: P1D
+  x_axis_sort_asc: true
+  x_axis_sort_series: name
+  x_axis_sort_series_ascending: true
+  metrics:
+  - expressionType: SQL
+    sqlExpression: 'COUNT(*) / SUM(COUNT(*)) OVER () * 100
+
+      '
+    column: null
+    aggregate: null
+    datasourceWarning: false
+    hasCustomLabel: true
+    label: '%'
+    optionName: metric_zz285d3223_kymkyq9xvzp
+  groupby: []
+  adhoc_filters:
+  - clause: WHERE
+    comparator: No filter
+    datasourceWarning: false
+    expressionType: SIMPLE
+    filterOptionName: filter_yhpcvl56mjk_silq3iy9dcq
+    isExtra: false
+    isNew: false
+    operator: TEMPORAL_RANGE
+    sqlExpression: null
+    subject: FECHA
+  - clause: WHERE
+    comparator: sin datos
+    datasourceWarning: false
+    expressionType: SIMPLE
+    filterOptionName: filter_4dlsipznref_jlm0nrhz4ag
+    isExtra: false
+    isNew: false
+    operator: '!='
+    operatorId: NOT_EQUALS
+    sqlExpression: null
+    subject: SEXO
+  order_desc: true
+  row_limit: 10000
+  truncate_metric: true
+  show_empty_columns: true
+  comparison_type: values
+  annotation_layers: []
+  forecastPeriods: 10
+  forecastInterval: 0.8
+  orientation: vertical
+  x_axis_title: SEXO
+  x_axis_title_margin: 50
+  y_axis_title: '% VICTIMAS'
+  y_axis_title_margin: 50
+  y_axis_title_position: Left
+  sort_series_type: sum
+  color_scheme: supersetColors
+  only_total: true
+  show_legend: false
+  legendType: scroll
+  legendOrientation: top
+  legendMargin: null
+  x_axis_time_format: smart_date
+  y_axis_format: SMART_NUMBER
+  truncateXAxis: true
+  y_axis_bounds:
+  - null
+  - null
+  rich_tooltip: true
+  tooltipTimeFormat: smart_date
+  extra_form_data: {}
+  dashboards:
+  - 1
+query_context: '{"datasource":{"id":1,"type":"table"},"force":false,"queries":[{"filters":[{"col":"FECHA","op":"TEMPORAL_RANGE","val":"No
+  filter"},{"col":"SEXO","op":"!=","val":"sin datos"}],"extras":{"time_grain_sqla":"P1D","having":"","where":""},"applied_time_extras":{},"columns":[{"timeGrain":"P1D","columnType":"BASE_AXIS","sqlExpression":"SEXO","label":"SEXO","expressionType":"SQL"}],"metrics":[{"expressionType":"SQL","sqlExpression":"COUNT(*)
+  / SUM(COUNT(*)) OVER () * 100\n","column":null,"aggregate":null,"datasourceWarning":false,"hasCustomLabel":true,"label":"%","optionName":"metric_zz285d3223_kymkyq9xvzp"}],"orderby":[[{"expressionType":"SQL","sqlExpression":"COUNT(*)
+  / SUM(COUNT(*)) OVER () * 100\n","column":null,"aggregate":null,"datasourceWarning":false,"hasCustomLabel":true,"label":"%","optionName":"metric_zz285d3223_kymkyq9xvzp"},false]],"annotation_layers":[],"row_limit":10000,"series_columns":[],"series_limit":0,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{},"time_offsets":[],"post_processing":[{"operation":"pivot","options":{"index":["SEXO"],"columns":[],"aggregates":{"%":{"operator":"mean"}},"drop_missing_columns":false}},{"operation":"flatten"}]}],"form_data":{"datasource":"1__table","viz_type":"echarts_timeseries_bar","slice_id":3,"x_axis":"SEXO","time_grain_sqla":"P1D","x_axis_sort_asc":true,"x_axis_sort_series":"name","x_axis_sort_series_ascending":true,"metrics":[{"expressionType":"SQL","sqlExpression":"COUNT(*)
+  / SUM(COUNT(*)) OVER () * 100\n","column":null,"aggregate":null,"datasourceWarning":false,"hasCustomLabel":true,"label":"%","optionName":"metric_zz285d3223_kymkyq9xvzp"}],"groupby":[],"adhoc_filters":[{"clause":"WHERE","comparator":"No
+  filter","datasourceWarning":false,"expressionType":"SIMPLE","filterOptionName":"filter_yhpcvl56mjk_silq3iy9dcq","isExtra":false,"isNew":false,"operator":"TEMPORAL_RANGE","sqlExpression":null,"subject":"FECHA"},{"clause":"WHERE","comparator":"sin
+  datos","datasourceWarning":false,"expressionType":"SIMPLE","filterOptionName":"filter_4dlsipznref_jlm0nrhz4ag","isExtra":false,"isNew":false,"operator":"!=","operatorId":"NOT_EQUALS","sqlExpression":null,"subject":"SEXO"}],"order_desc":true,"row_limit":10000,"truncate_metric":true,"show_empty_columns":true,"comparison_type":"values","annotation_layers":[],"forecastPeriods":10,"forecastInterval":0.8,"orientation":"vertical","x_axis_title":"SEXO","x_axis_title_margin":50,"y_axis_title":"%
+  VICTIMAS","y_axis_title_margin":50,"y_axis_title_position":"Left","sort_series_type":"sum","color_scheme":"supersetColors","only_total":true,"show_legend":false,"legendType":"scroll","legendOrientation":"top","legendMargin":null,"x_axis_time_format":"smart_date","y_axis_format":"SMART_NUMBER","truncateXAxis":true,"y_axis_bounds":[null,null],"rich_tooltip":true,"tooltipTimeFormat":"smart_date","extra_form_data":{},"dashboards":[1],"force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: 17a58d03-9a7e-4c73-8b5f-7a6dcda9e9c9
+version: 1.0.0
+dataset_uuid: ed7c4a12-b40f-401c-8bcd-a1684d6a3149
