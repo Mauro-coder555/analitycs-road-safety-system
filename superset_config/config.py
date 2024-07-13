@@ -430,7 +430,7 @@ DEFAULT_FEATURE_FLAGS: dict[str, bool] = {
     "PRESTO_EXPAND_DATA": False,
     # Exposes API endpoint to compute thumbnails
     "THUMBNAILS": False,
-    "DASHBOARD_CACHE": False,  # deprecated
+    "DASHBOARD_CACHE": True,  # deprecated
     "REMOVE_SLICE_LEVEL_LABEL_COLORS": False,  # deprecated
     "SHARE_QUERIES_VIA_KV_STORE": False,
     "TAGGING_SYSTEM": False,
@@ -470,7 +470,7 @@ DEFAULT_FEATURE_FLAGS: dict[str, bool] = {
     "RLS_IN_SQLLAB": False,
     # Enable caching per impersonation key (e.g username) in a datasource where user
     # impersonation is enabled
-    "CACHE_IMPERSONATION": False,
+    "CACHE_IMPERSONATION": True,
     # Enable caching per user key for Superset cache (not database cache impersonation)
     "CACHE_QUERY_BY_USER": False,
     # Enable sharing charts with embedding

@@ -267,5 +267,20 @@ Sigue estos pasos para configurar tu entorno y restaurar la base de datos de Sup
 
    http://localhost:8088
 
-### 5. Accede al dashboard OSMV para visualizar gráficos interactivos sobre la problemática en cuestión.
-   
+### 5. Para importar el dashboard, siga estos pasos:
+
+1. **Vaya a la sección Dashboards:** En el menú lateral izquierdo, haga clic en la opción **Dashboards**.
+
+2. **Inicie la importación:** En la esquina superior derecha de la página, haga clic en el botón **Importar dashboards**.
+
+   ![img dashboard import](imgs/dashboard-import.png)
+
+3. **Seleccione el archivo .zip:** En **CHOOSE FILE**, busque y seleccione el archivo **OMSV.zip** ubicado en la carpeta **superset_exports** del proyecto.
+
+4. **Ingrese la clave de importación:** En el campo **Clave de importación**, escriba la clave **"superset"**.
+
+5. **Complete la importación:** Haga clic en el botón **Importar** para finalizar el proceso de importación.
+
+6. **Una vez completada la importación, el dashboard "OMSV" estará disponible en la sección Dashboards de la interfaz web.**
+
+    
