@@ -48,7 +48,9 @@ Para obtener información relacionada con los archivos, tipos y descripciones qu
 | 8  | imgs  | .png   | Contiene imagenes para la parte visual del readme          |
 | 9  | KPI'S  | .csv   | Contiene archivos csv asociados a los KPI'S tratados          |
 | 10  | db scripts  | .sql/,py  | Contiene archivos asociados a la carga y restauraciòn de las bases de datos          |
-| 11  | docker-compose  | .yml   | Contiene el código para la inicializacion de los contenedores docker        |
+| 11  | docker-compose  | .py   | Contiene el código para la inicializacion de los contenedores docker        |
+| 11  | superset_config  | .yml   | Contiene el archivo de configuración de superset        |
+| 11  | superset_exports  | .zip   | Contiene el archivo comprimido en el cual se encuentra el dashboard para ser importado en superset        |
 
 
 
